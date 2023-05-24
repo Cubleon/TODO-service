@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/uikit.min.css">
+    
+</head>
+<body>
+    <main>
+        <header class="uk-section uk-section-small uk-section-secondary">
+			<div class="uk-container uk-container-small uk-text-center">
+				<h1 class="uk-heading-line uk-text-bold"><span>TODO-лист</span></h1>
+			</div>
+		</header>
+        <div class="uk-card uk-card-primary uk-margin uk-margin-auto uk-width-large">
+            <div class="uk-card-header">
+                <h2 class="uk-card-title">Добавление новой задачи</h2>
+            </div>
+            <div class="uk-card-body">
+                <input class="uk-input" placeholder="Что нужно сделать?" id="mainTask">
+                <textarea class="uk-textarea uk-margin" placeholder="Описание" id="taskDescription"></textarea>
+                <div class="uk-text-center">
+                    <button class="uk-button uk-button-default" id="addTask">Добавить</button>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <div class="uk-section uk-section-muted uk-text-center uk-padding-large">
+            <h2 class="uk-heading">Ваши задачи</h2>
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-center">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active" id="allT"><a>Все</a></li>
+                        <li class="" id="activeT"><a>Активные</a></li>
+                        <li class="" id="completedT"><a>Завершённые</a></li>
+                    </ul>
+                </div>     
+            </nav>
+            <hr class="uk-divider-icon">
+            <div class="uk-child-width-1-3" uk-grid id="allTasks"></div>
+
+            <p class="uk-text-default uk-text-muted" id="noTasks">У вас пока нет заданий</p>
+
+            <p class="uk-text-default uk-text-muted" id="noSectionTasks" hidden>В этом разделе пока нет заданий</p>
+
+            <div class="uk-card uk-card-default uk-margin uk-padding-small">
+                <progress class="uk-progress uk-width-1-2 uk-align-center" value="0" max="100" id="progressValue"></progress>
+                <p id="progressText">Вы пока не выполнили ни одного задания</p>
+            </div>
+            
+
+            <button class="uk-button uk-button-primary uk-margin" id="clearTasks">Очистить все</button>
+        </div>     
+    </main>
+
+    <!-- Подключение скриптов для UIKit -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/logics.js"></script>
+
+</body>
+</html>
